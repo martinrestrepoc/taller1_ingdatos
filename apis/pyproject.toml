@@ -1,0 +1,14 @@
+[project]
+name = "apis"
+version = "0.1.0"
+description = "Extraccion normalizada de la Copa Mundial 2022 con API-Football"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "ipykernel>=7.3.0",
+    "jupyter>=1.1.1",
+    "pandas>=3.0.5",
+    "pyarrow>=25.0.1",
+    "python-dotenv>=1.2.2",
+    "requests>=2.34.2",
+]
