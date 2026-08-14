@@ -1,0 +1,10 @@
+name: web_book_scraping
+channels:
+  - defaults
+dependencies:
+  - python=3.12
+  - selenium
+  - beautifulsoup4
+  - pandas
+  - pyarrow
+  - ipykernel
