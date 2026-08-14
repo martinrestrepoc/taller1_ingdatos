@@ -8,6 +8,18 @@
 .venv/
 venv/
 
+# Python-generated files and tool caches
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
 # Jupyter temporary files
 .ipynb_checkpoints/
 

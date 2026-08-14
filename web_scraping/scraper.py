@@ -1,7 +1,8 @@
 from bs4 import BeautifulSoup
 
-from selenium.webdriver.chrome.service import Service
 from selenium import webdriver
+# En WSL, descomentar este import para usar el ChromeDriver del sistema:
+# from selenium.webdriver.chrome.service import Service
 
 from datetime import datetime
 
@@ -10,12 +11,16 @@ from urllib.parse import urljoin
 import pandas as pd
 
 
-service = Service("/usr/bin/chromedriver")
+# En WSL, descomentar esta línea si ChromeDriver está instalado en esta ruta:
+# service = Service("/usr/bin/chromedriver")
 
 options = webdriver.ChromeOptions()
 options.add_argument("--start-maximized")
 
-driver = webdriver.Chrome(service=service, options=options)
+# En macOS u otros sistemas, Selenium Manager localiza el driver automáticamente.
+driver = webdriver.Chrome(options=options)
+# En WSL, reemplazar la línea anterior por esta:
+# driver = webdriver.Chrome(service=service, options=options)
 
 url = "https://books.toscrape.com/index.html" # url de la página principal
 driver.get(url) # carga la página
